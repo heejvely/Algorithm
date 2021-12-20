@@ -6,7 +6,7 @@ from collections import deque
 class Stack:
   """고정 길이 스택 클래스(collections.deque를 사용)"""
 
-  def __init__(self, maxlen: int = 256) - None:
+  def __init__(self, maxlen: int = 256) -> None:
     """스택 초기화"""
     self.capacity = maxlen
     self.__stk = deque([], maxlen)
@@ -28,6 +28,10 @@ class Stack:
     self.__stk.append(value)
 
   def pop(self) -> Any:
+    """스택에서 데이터를 팝"""
+    return self.__stk.pop()
+
+  def peek(self) -> Any:
     """스택에서 데이터를 피크"""
     return self.__stk[-1]
 
