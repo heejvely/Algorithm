@@ -6,7 +6,7 @@ def solution(phone_book):
     return True
 
 def solution(phone_book):
-    book = sorted(phone_book):
+    book = sorted(phone_book)
     for i in range(len(book)-1):
         if len(book[i]) < len(book[i+1]):
             if book[i+1][:len(book[i])] == book[i]:
